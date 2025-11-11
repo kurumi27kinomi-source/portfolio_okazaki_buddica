@@ -64,39 +64,57 @@ export default function Philosophy() {
 
           {/* two columns */}
           <div className="grid gap-6 md:grid-cols-2">
-            {/* left card */}
-            <div className="group rounded-2xl border border-emerald-100 bg-white/70 p-6 shadow-md transition hover:shadow-lg">
-              <div className="mb-3 text-sm text-emerald-700">BUDDICAに共感する理由</div>
-              <ul className="space-y-2 text-sm text-slate-600">
-                {[
+            {[
+              {
+                title: 'BUDDICAに共感する理由',
+                bullets: [
                   '理念と行動が一致している会社であること',
                   '人の想いを中心に、事業が構築されていること',
                   '挑戦と成長を肯定する文化があること',
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-500" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* right card */}
-            <div className="group rounded-2xl border border-sky-100 bg-white/70 p-6 shadow-md transition hover:shadow-lg">
-              <div className="mb-3 text-sm text-sky-700">エンジニアとしての使命</div>
-              <ul className="space-y-2 text-sm text-slate-600">
-                {[
+                ],
+                accent: {
+                  border: '#a7f3d0',
+                  background: 'linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%)',
+                  title: '#047857',
+                  icon: '#059669',
+                },
+              },
+              {
+                title: 'エンジニアとしての使命',
+                bullets: [
                   '技術で理念を支え、体験を豊かにする',
                   '挑戦を恐れず、新しい仕組みを提案する',
                   'BUDDICAの想いをシステムに宿す',
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-sky-500" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                ],
+                accent: {
+                  border: '#bfdbfe',
+                  background: 'linear-gradient(135deg, #eff6ff 0%, #ffffff 100%)',
+                  title: '#1d4ed8',
+                  icon: '#2563eb',
+                },
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="group rounded-2xl p-6 shadow-md transition hover:shadow-lg border"
+                style={{ borderColor: card.accent.border, background: card.accent.background }}
+              >
+                <div className="mb-3 text-sm" style={{ color: card.accent.title }}>
+                  {card.title}
+                </div>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {card.bullets.map((t) => (
+                    <li key={t} className="flex items-start gap-2">
+                      <CheckCircle2
+                        className="mt-0.5 h-4 w-4"
+                        style={{ color: card.accent.icon }}
+                      />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
           {/* footer note */}

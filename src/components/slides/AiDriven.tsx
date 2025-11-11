@@ -1,6 +1,63 @@
 import { Brain, Users, Code } from "lucide-react";
 
 export default function AiDriven() {
+  const pillars = [
+    {
+      title: "人",
+      icon: Users,
+      description: (
+        <>
+          ビジョンと設計意図を明確にし、
+          <br />
+          チームの方向性を示す。
+        </>
+      ),
+      accent: {
+        gradient: "linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%)",
+        borderColor: "#a7f3d0",
+        iconBg: "#d1fae5",
+        iconColor: "#047857",
+        titleColor: "#047857",
+      },
+    },
+    {
+      title: "AI",
+      icon: Brain,
+      description: (
+        <>
+          人の意図を正確に理解し、
+          <br />
+          安全かつ迅速に実装する。
+        </>
+      ),
+      accent: {
+        gradient: "linear-gradient(135deg, #fff7ed 0%, #ffffff 100%)",
+        borderColor: "#fed7aa",
+        iconBg: "#ffe8cc",
+        iconColor: "#ea580c",
+        titleColor: "#ea580c",
+      },
+    },
+    {
+      title: "共創",
+      icon: Code,
+      description: (
+        <>
+          人とAIの強みを融合し、
+          <br />
+          継続的に価値を生み出す。
+        </>
+      ),
+      accent: {
+        gradient: "linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%)",
+        borderColor: "#ddd6fe",
+        iconBg: "#ede9fe",
+        iconColor: "#7c3aed",
+        titleColor: "#6d28d9",
+      },
+    },
+  ];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-8">
       <div className="max-w-4xl w-full">
@@ -29,47 +86,35 @@ export default function AiDriven() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 pt-8">
-            <div className="text-center p-6 bg-gradient-to-br from-emerald-50 to-white rounded-2xl border border-emerald-100">
-              <div className="w-12 h-12 mx-auto mb-4 bg-emerald-100 rounded-xl flex items-center justify-center">
-                <Users className="w-6 h-6 text-emerald-600" />
+            {pillars.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="text-center p-6 rounded-2xl border shadow-sm"
+                style={{
+                  background: pillar.accent.gradient,
+                  borderColor: pillar.accent.borderColor,
+                }}
+              >
+                <div
+                  className="w-12 h-12 mx-auto mb-4 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: pillar.accent.iconBg }}
+                >
+                  <pillar.icon
+                    className="w-6 h-6"
+                    style={{ color: pillar.accent.iconColor }}
+                  />
+                </div>
+                <div
+                  className="font-medium mb-2"
+                  style={{ color: pillar.accent.titleColor }}
+                >
+                  {pillar.title}
+                </div>
+                <p className="text-sm text-slate-600 leading-snug">
+                  {pillar.description}
+                </p>
               </div>
-              <div className="text-emerald-700 font-medium mb-2">
-                人
-              </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                ビジョンと設計意図を明確にし、
-                <br />
-                チームの方向性を示す。
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-sky-50 to-white rounded-2xl border border-sky-100">
-              <div className="w-12 h-12 mx-auto mb-4 bg-sky-100 rounded-xl flex items-center justify-center">
-                <Brain className="w-6 h-6 text-sky-600" />
-              </div>
-              <div className="text-sky-700 font-medium mb-2">
-                AI
-              </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                人の意図を正確に理解し、
-                <br />
-                安全かつ迅速に実装する。
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-violet-50 to-white rounded-2xl border border-violet-100">
-              <div className="w-12 h-12 mx-auto mb-4 bg-violet-100 rounded-xl flex items-center justify-center">
-                <Code className="w-6 h-6 text-violet-600" />
-              </div>
-              <div className="text-violet-700 font-medium mb-2">
-                共創
-              </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                人とAIの強みを融合し、
-                <br />
-                継続的に価値を生み出す。
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

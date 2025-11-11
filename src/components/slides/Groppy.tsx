@@ -73,11 +73,16 @@ export default function Groppy() {
                 </div>
               </div>
               
-              <div className="p-4 bg-gradient-to-br from-sky-50 to-white rounded-2xl border border-sky-100">
+              <div
+                className="p-4 rounded-2xl border border-brand-blue-100"
+                style={{
+                  background: "linear-gradient(135deg, #eff6ff 0%, #ffffff 100%)",
+                }}
+              >
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center flex-shrink-0">2</div>
+                  <div className="w-8 h-8 rounded-full bg-brand-blue-500 text-white flex items-center justify-center flex-shrink-0">2</div>
                   <div>
-                    <div className="text-sky-700 mb-1">発展段階</div>
+                    <div className="text-brand-blue-700 mb-1">発展段階</div>
                     <p className="text-sm text-slate-600">OpenAI Embeddingsによる検索精度向上（ベクトル化）</p>
                   </div>
                 </div>
@@ -108,7 +113,7 @@ export default function Groppy() {
             
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
               <div className="flex items-center gap-2 mb-3">
-                <Bell className="w-5 h-5 text-sky-600" />
+                <Bell className="w-5 h-5 text-brand-blue-600" />
                 <div className="text-slate-700">スケジュール通知</div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">

@@ -1,6 +1,54 @@
 import { Compass, Sparkles } from "lucide-react";
 
 export default function FutureVision() {
+  const pillars = [
+    {
+      title: "事業（ビジネス）",
+      description: (
+        <>
+          目の前の課題を超えて、本当に解決すべきことを探る。
+          <br />
+          ビジネスの成長に貢献できる形で、価値を届ける。
+        </>
+      ),
+      accent: {
+        background: "linear-gradient(135deg, #fffbeb 0%, #ffffff 100%)",
+        border: "#fde68a",
+        title: "#d97706",
+      },
+    },
+    {
+      title: "技術（手段）",
+      description: (
+        <>
+          HLD/LLDで設計意図を明確にし、再現性ある開発を進める。
+          <br />
+          AIを含む最適手段で、品質とスピードを両立。
+        </>
+      ),
+      accent: {
+        background: "linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%)",
+        border: "#a7f3d0",
+        title: "#047857",
+      },
+    },
+    {
+      title: "チーム（仲間）",
+      description: (
+        <>
+          自走できる仕組みを整え、権限を委ねて成長を促す。
+          <br />
+          学びを共有し、挑戦を支え続ける。
+        </>
+      ),
+      accent: {
+        background: "linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%)",
+        border: "#ddd6fe",
+        title: "#6d28d9",
+      },
+    },
+  ];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-8">
       <div className="max-w-4xl w-full">
@@ -54,41 +102,26 @@ export default function FutureVision() {
 
           {/* Three Pillars */}
           <div className="grid md:grid-cols-3 gap-6 pt-6">
-            {/* Business */}
-            <div className="text-center p-6 bg-gradient-to-br from-emerald-50 to-white rounded-2xl border border-emerald-100">
-              <div className="text-emerald-700 mb-2 font-medium">
-                事業（ビジネス）
+            {pillars.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="text-center p-6 rounded-2xl border"
+                style={{
+                  background: pillar.accent.background,
+                  borderColor: pillar.accent.border,
+                }}
+              >
+                <div
+                  className="mb-2 font-medium"
+                  style={{ color: pillar.accent.title }}
+                >
+                  {pillar.title}
+                </div>
+                <p className="text-sm text-slate-600 leading-snug">
+                  {pillar.description}
+                </p>
               </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                目の前の課題を超えて、本当に解決すべきことを探る。
-                <br />
-                ビジネスの成長に貢献できる形で、価値を届ける。
-              </p>
-            </div>
-
-            {/* Technology */}
-            <div className="text-center p-6 bg-gradient-to-br from-sky-50 to-white rounded-2xl border border-sky-100">
-              <div className="text-sky-700 mb-2 font-medium">
-                技術（手段）
-              </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                HLD/LLDで設計意図を明確にし、再現性ある開発を進める。
-                <br />
-                AIを含む最適手段で、品質とスピードを両立。
-              </p>
-            </div>
-
-            {/* Team */}
-            <div className="text-center p-6 bg-gradient-to-br from-violet-50 to-white rounded-2xl border border-violet-100">
-              <div className="text-violet-700 mb-2 font-medium">
-                チーム（仲間）
-              </div>
-              <p className="text-sm text-slate-600 leading-snug">
-                自走できる仕組みを整え、権限を委ねて成長を促す。
-                <br />
-                学びを共有し、挑戦を支え続ける。
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
