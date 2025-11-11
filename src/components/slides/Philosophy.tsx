@@ -14,7 +14,7 @@ export default function Philosophy() {
         <div className="mb-10 flex items-center gap-3">
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/70 px-3 py-1 text-xs text-emerald-700 shadow-sm backdrop-blur">
             <Heart className="h-4 w-4" />
-            GMOコネクトの理念に共感して
+            BUDDICA DIRECTに惹かれて
           </span>
         </div>
 
@@ -26,20 +26,28 @@ export default function Philosophy() {
               <Sparkles className="h-7 w-7" />
             </div>
             <p className="text-lg leading-relaxed text-slate-700">
-              GMOコネクトの「価値あるつながりを提供する」「楽しく働く」に強く共感しています。<br />
-              この2つは、私自身が大切にしてきた「人との信頼」「学び合う文化」と深く通じています。
+              「ドライブを、人生最高のエンタメに。」――  
+              この言葉に出会って、心が動きました。<br />
+              一度は仕事で疲れ、そこそこに生きようと思った時期もありましたが、  
+              中野社長の理念に触れ、“もう一度挑戦する人生を選びたい”と強く思いました。<br />
+              技術で、その世界観を支える仲間になりたいと感じています。
             </p>
           </div>
 
           {/* body copy */}
           <div className="space-y-6 text-slate-700">
             <p className="text-lg leading-relaxed">
-              <strong>「価値あるつながり」</strong>とは、信頼と成長を土台に挑戦を支え合い、新しい価値を共に生み出す関係性です。
-              顧客・仲間・組織がつながることで、利益だけでなく“人の成長”が循環する——その仕組みを広げていくことが、私のエンジニアとしての使命です。
+              <strong>「愛車を通じて人生を豊かにする」</strong>という想いに、深く共感しています。<br />
+              クルマの販売という“表の体験”を支える“裏の技術”にも、同じ情熱が必要です。<br />
+              システムやデータ、体験設計――どの領域も、すべては人の感情を動かすための手段。<br />
+              私はその裏側を整え、BUDDICAの挑戦をテクノロジーで後押ししたいと考えています。
             </p>
             <p className="text-lg leading-relaxed">
-              <strong>「楽しく働くこと」</strong>とは、挑戦と学びを仲間と共有し、安心して意見を交わせる環境をつくること。
-              失敗を責めずに次へつなげることで、真の“働く喜び”が生まれると考えています。
+              成功体験は多くはありませんが、AWSの利用最適化など、仕組みを変えてチームに貢献してきました。<br />
+              仲間がメンタル的に疲れていた時期もありましたが、理念を共有し、目的を再定義することで再び前向きに働けるようになった――  
+              その経験が、今の自分の原点です。<br />
+              技術を磨く理由は、“人の可能性を支えるため”。  
+              BUDDICAの理念と共に、その差分を広げていきたいです。
             </p>
           </div>
 
@@ -49,8 +57,8 @@ export default function Philosophy() {
               <Lightbulb className="h-4 w-4 text-emerald-700" />
             </div>
             <p className="text-base leading-relaxed text-slate-800">
-              「信頼でつながり、共に成長できる職場をつくりたい。」<br />
-              その積み重ねが、価値ある未来を形にすると信じています。
+              「理念を形にするエンジニアでありたい。」<br />
+              クルマを通じて、人の心を動かす仕組みを創りたい。
             </p>
           </div>
 
@@ -58,12 +66,12 @@ export default function Philosophy() {
           <div className="grid gap-6 md:grid-cols-2">
             {/* left card */}
             <div className="group rounded-2xl border border-emerald-100 bg-white/70 p-6 shadow-md transition hover:shadow-lg">
-              <div className="mb-3 text-sm text-emerald-700">価値あるつながり</div>
+              <div className="mb-3 text-sm text-emerald-700">BUDDICAに共感する理由</div>
               <ul className="space-y-2 text-sm text-slate-600">
                 {[
-                  '信頼と成長を土台に、挑戦を支え合う',
-                  '顧客・仲間・組織が共に価値を生み出す',
-                  '成果と学びが循環する仕組みをつくる',
+                  '理念と行動が一致している会社であること',
+                  '人の想いを中心に、事業が構築されていること',
+                  '挑戦と成長を肯定する文化があること',
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-500" />
@@ -75,12 +83,12 @@ export default function Philosophy() {
 
             {/* right card */}
             <div className="group rounded-2xl border border-sky-100 bg-white/70 p-6 shadow-md transition hover:shadow-lg">
-              <div className="mb-3 text-sm text-sky-700">楽しく働く</div>
+              <div className="mb-3 text-sm text-sky-700">エンジニアとしての使命</div>
               <ul className="space-y-2 text-sm text-slate-600">
                 {[
-                  '心理的安全性のある環境で挑戦を楽しむ',
-                  '個々の強みを尊重し、学びを共有する',
-                  '挑戦と笑顔が共に循環するチームを育てる',
+                  '技術で理念を支え、体験を豊かにする',
+                  '挑戦を恐れず、新しい仕組みを提案する',
+                  'BUDDICAの想いをシステムに宿す',
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-sky-500" />
@@ -93,8 +101,8 @@ export default function Philosophy() {
 
           {/* footer note */}
           <div className="mt-10 text-center text-slate-700">
-            仕事を通じて、人と人、思いと価値がつながっていく。<br className="hidden sm:block" />
-            その"つながりの輪"の中で、変わり続けながら貢献していきたい。
+            技術は手段。目的は、人の心を動かすこと。<br className="hidden sm:block" />
+            BUDDICAの理念と共に、人生を走り抜けていきたい。
           </div>
         </div>
       </div>

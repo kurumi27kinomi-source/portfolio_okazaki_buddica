@@ -59,7 +59,7 @@ export default function CredoPage() {
       {/* ===== Hero Section ===== */}
       <section className="flex flex-col items-center justify-center py-24 px-8">
         <h1 className="text-slate-800 text-4xl md:text-5xl font-semibold mb-6">
-          変わらないのは、変わり続けるという覚悟。
+          変わらないのは、変わり続けること。
         </h1>
         <p className="text-slate-600 text-lg md:text-xl max-w-2xl leading-relaxed">
           世界も技術も日々進化する中で、
